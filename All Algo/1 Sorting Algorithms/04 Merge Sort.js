@@ -1,13 +1,11 @@
 function mergeSort(arr) {
-    if (arr.length <= 1) {
-        return arr;
-    }
+    if (arr.length <= 1)  return arr;
 
     const mid = Math.floor(arr.length / 2);
     const left = arr.slice(0, mid);
     const right = arr.slice(mid);
 
-    return merge(mergeSort(left), mergeSort(right));
+    return merge(mergeSort(left), mergeSort(right)); //Recursion
 }
 
 function merge(left, right) {
@@ -15,7 +13,7 @@ function merge(left, right) {
     let leftIndex = 0;
     let rightIndex = 0;
 
-    while (leftIndex < left.length && rightIndex < right.length) {
+    while (leftIndex < left.length && rightIndex < right.length) { // 0 < 3 && 0<4
         if (left[leftIndex] < right[rightIndex]) {
             result.push(left[leftIndex]);
             leftIndex++;
