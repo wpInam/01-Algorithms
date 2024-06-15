@@ -22,3 +22,34 @@ function quickSort(arr) {
 // Example usage:
 const array = [34, 7, 23, 32, 5, 62];
 console.log("Sorted array:", quickSort(array));
+
+// --- See Array in Action
+[
+    [
+        [
+            [],
+            [
+                5
+            ],
+            [
+                7
+            ]
+        ],
+        [
+            23
+        ],
+        []
+    ],
+    [
+        32
+    ],
+    [
+        [
+            34
+        ],
+        [
+            62
+        ],
+        []
+    ]
+]
