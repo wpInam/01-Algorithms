@@ -17,6 +17,8 @@ function quickSort(arr) {
     }
 
     return [...quickSort(left), ...equal, ...quickSort(right)];
+
+    return [ quickSort(left),  equal,  quickSort(right)]; // Use this we you want to see the tree in console
 }
 
 // Example usage:
