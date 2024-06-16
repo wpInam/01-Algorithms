@@ -7,7 +7,7 @@ class Node {
 
 class Stack {
     constructor() {
-        this.top = null;
+        this.top = null; // This is Our Main Tree Where everything is stored
         this.size = 0;
     }
 
@@ -19,6 +19,7 @@ class Stack {
         }
         this.top = newNode;
         this.size++;
+        console.log(this.top) // See the Tree
     }
 
     // Remove and return the top element from the stack
@@ -29,6 +30,7 @@ class Stack {
         const value = this.top.value;
         this.top = this.top.next;
         this.size--;
+        console.log(this.top, value); // See the Tree and value
         return value;
     }
 
