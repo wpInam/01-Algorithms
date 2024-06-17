@@ -1,3 +1,5 @@
+// Theme Behind this Algorithm
+// Take two sorted array and merge them. if we do not have sorted array then use recursion to make them sorted
 function mergeSort(arr) {
     if (arr.length <= 1)  return arr;
     debugger
