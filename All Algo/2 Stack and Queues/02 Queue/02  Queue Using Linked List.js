@@ -8,19 +8,19 @@ class Node {
 class Queue {
     constructor() {
         this.front = null;
-        this.rear = null;
+        this.back = null;
         this.size = 0;
     }
 
     // Add an element to the end of the queue
     enqueue(value) {
         const newNode = new Node(value);
-        if (this.rear) {
-            this.rear.next = newNode;
+        if (this.back) {
+            this.back.next = newNode;
         }
-        this.rear = newNode;
-        if (!this.front) {
-            this.front = this.rear;
+        this.back = newNode;
+        if (!this.front) { // Check if it is null
+            this.front = this.back;
         }
         this.size++;
     }
@@ -33,7 +33,7 @@ class Queue {
         const value = this.front.value;
         this.front = this.front.next;
         if (!this.front) {
-            this.rear = null;
+            this.back = null;
         }
         this.size--;
         return value;
