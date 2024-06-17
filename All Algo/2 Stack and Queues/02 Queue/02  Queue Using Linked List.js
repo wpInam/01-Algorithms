@@ -20,7 +20,10 @@ class Queue {
         }
         this.back = newNode;
         if (!this.front) { // Check if it is null
-            this.front = this.back;
+            this.front = this.back; 
+            // First time we assign the new Node() to this.front
+            // After then when we change something to "new Node()" using this.back then this.front
+            // will automatically updated
         }
         this.size++;
     }
