@@ -34,3 +34,22 @@ function inOrder(root) {
       console.log(root.data);
     }
   }
+
+  // Example usage
+const root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
+
+console.log("In-order traversal:");
+inOrder(root);
+
+console.log("Pre-order traversal:");
+preOrder(root);
+
+console.log("Post-order traversal:");
+postOrder(root);
+
+console.log("BFS traversal:");
+bfs(root);
