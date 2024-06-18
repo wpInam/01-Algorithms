@@ -1,5 +1,7 @@
 # URL of the GPT Chat
 ~ https://chatgpt.com/share/01b0c8ed-2a3d-448b-8e38-7f91c28cc1aa
+~ https://chatgpt.com/share/a59564e7-9698-441b-896a-3b8265c98863
+
 
 ## To See Algorithms in animation that how it works (Must Watch)
 ~ https://www.w3schools.com/dsa/index.php
@@ -12,3 +14,7 @@
 
 ## A Quick Introduction to Graphs
 ~ https://youtu.be/cWNEl4HE2OE
+
+## Very Important playlist for this Course
+~ https://www.youtube.com/watch?v=coqQwbDezUA&list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP&index=1
+
