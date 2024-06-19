@@ -5,6 +5,7 @@ class Graph {
     }
 
     addVertex(vertex) {
+        debugger
         if (!this.vertices.includes(vertex)) {
             this.vertices.push(vertex);
             this.adjacencyMatrix.forEach(row => row.push(0));
@@ -40,7 +41,7 @@ class Graph {
         }
     }
 
-    removeVertex(vertex) {
+    removeVertex(vertex) { // I Have to do RND on this as well
         let index = this.vertices.indexOf(vertex);
 
         if (index !== -1) {
