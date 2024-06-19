@@ -18,3 +18,6 @@
 
 ## Graphs and All the Available Data Structures in JavaScript
 ~ https://chatgpt.com/share/a59564e7-9698-441b-896a-3b8265c98863
+
+## Very Important Topics explanation 
+~ https://youtu.be/kRYZmOZDlY0?list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP
