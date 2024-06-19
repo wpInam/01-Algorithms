@@ -15,8 +15,9 @@
 
 ## Very Important playlist for DSA in JavaScript
 ~ https://www.youtube.com/watch?v=coqQwbDezUA&list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP&index=1
+~ https://www.youtube.com/watch?v=W8yTh1I40DQ&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=1
 
-## Graphs and All the Available Data Structures in JavaScript
+## Graphs and All the Available Data Structures in JavaScript GPT Chat
 ~ https://chatgpt.com/share/a59564e7-9698-441b-896a-3b8265c98863
 
 ## Very Important Topics explanation 
