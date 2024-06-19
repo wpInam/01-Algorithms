@@ -48,7 +48,7 @@ class Graph {
         }
     }
 
-    dfsRecursive(startingVertex) {
+    dfsRecursive(startingVertex) { // Main
         const result = [];
         const visited = new Set();
 
@@ -68,7 +68,7 @@ class Graph {
         return result;
     }
 
-    dfsIterative(startingVertex) {
+    dfsIterative(startingVertex) { // Main
         const visited = new Set();
         const stack = [startingVertex];
         const result = [];
@@ -90,7 +90,7 @@ class Graph {
         return result;
     }
 
-    dfsPostOrder(startingVertex) {
+    dfsPostOrder(startingVertex) { // Main
         const result = [];
         const visited = new Set();
 
