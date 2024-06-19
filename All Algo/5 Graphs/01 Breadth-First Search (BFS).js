@@ -1,57 +1,68 @@
-function bfs(graph, start) {
-    const visited = new Set();
-    const queue = [start];
-  
-    while (queue.length > 0) {
-      const current = queue.shift();// Only this thing is change in DFS
-      visited.add(current);
-  
-      for (const neighbor of graph[current]) {
-        if (!visited.has(neighbor)) {
-          queue.push(neighbor);
-          visited.add(neighbor);
-        }
-      }
-    }
-  
-    return visited;
-  }
-  // --- Second Time when I ask GPT
-  class Graph {
+class Graph {
     constructor() {
         this.adjacencyList = {};
     }
 
     addVertex(vertex) {
         if (!this.adjacencyList[vertex]) {
-            this.adjacencyList[vertex] = [];
+            this.adjacencyList[vertex] = new Set();
         }
     }
 
     addEdge(vertex1, vertex2) {
-        if (this.adjacencyList[vertex1]) {
-            this.adjacencyList[vertex1].push(vertex2);
+        if (!this.adjacencyList[vertex1]) {
+            this.addVertex(vertex1);
         }
-        if (this.adjacencyList[vertex2]) {
-            this.adjacencyList[vertex2].push(vertex1);
+        if (!this.adjacencyList[vertex2]) {
+            this.addVertex(vertex2);
+        }
+        this.adjacencyList[vertex1].add(vertex2);
+        this.adjacencyList[vertex2].add(vertex1);
+    }
+
+    removeEdge(vertex1, vertex2) {
+        this.adjacencyList[vertex1].delete(vertex2);
+        this.adjacencyList[vertex2].delete(vertex1);
+    }
+
+    removeVertex(vertex) {
+        if (!this.adjacencyList[vertex]) {
+            return;
+        }
+        for (let adjacentVertex of this.adjacencyList[vertex]) {
+            this.removeEdge(vertex, adjacentVertex);
+        }
+        delete this.adjacencyList[vertex];
+    }
+
+    hasEdge(vertex1, vertex2) {
+        return (
+            this.adjacencyList[vertex1].has(vertex2) &&
+            this.adjacencyList[vertex2].has(vertex1)
+        );
+    }
+
+    display() {
+        for (let vertex in this.adjacencyList) {
+            console.log(vertex + " -> " + [...this.adjacencyList[vertex]]);
         }
     }
 
-    bfs(start) {
-        const queue = [start];
+    bfs(startingVertex) { // --- Main Is This
+        debugger;
+        const visited = new Set();
+        const queue = [startingVertex];
         const result = [];
-        const visited = {};
-        let currentVertex;
 
-        visited[start] = true;
+        visited.add(startingVertex);
 
-        while (queue.length) {
-            currentVertex = queue.shift();
-            result.push(currentVertex);
+        while (queue.length > 0) {
+            const vertex = queue.shift();
+            result.push(vertex);
 
-            this.adjacencyList[currentVertex].forEach(neighbor => {
-                if (!visited[neighbor]) {
-                    visited[neighbor] = true;
+            this.adjacencyList[vertex].forEach(neighbor => {
+                if (!visited.has(neighbor)) {
+                    visited.add(neighbor);
                     queue.push(neighbor);
                 }
             });
@@ -63,19 +74,15 @@ function bfs(graph, start) {
 
 // Example usage:
 const graph = new Graph();
-graph.addVertex('A');
-graph.addVertex('B');
-graph.addVertex('C');
-graph.addVertex('D');
-graph.addVertex('E');
-graph.addVertex('F');
-
-graph.addEdge('A', 'B');
-graph.addEdge('A', 'C');
-graph.addEdge('B', 'D');
-graph.addEdge('C', 'E');
-graph.addEdge('D', 'E');
-graph.addEdge('D', 'F');
-graph.addEdge('E', 'F');
-
-console.log("BFS:", graph.bfs('A')); // Output: ['A', 'B', 'C', 'D', 'E', 'F']
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+graph.addEdge("A", "B");
+graph.addEdge("A", "C");
+graph.addEdge("B", "C");
+graph.display();
+console.log("BFS:", graph.bfs("A")); // Example BFS starting from vertex "A"
+graph.removeEdge("A", "B");
+graph.display();
+graph.removeVertex("A");
+graph.display();
