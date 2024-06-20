@@ -13,13 +13,13 @@ class Node {
   
     insert (value) {
       var newNode = new Node(value)
-      if (this.root === null) {
+      if (this.root === null) { // Base Case
         this.root = newNode
         return this
       }
       let current = this.root
       while (current) {
-        if (value === current.value) return undefined
+        if (value === current.value) return undefined // Base Case
         if (value < current.value) {
           if (current.left === null) {
             current.left = newNode

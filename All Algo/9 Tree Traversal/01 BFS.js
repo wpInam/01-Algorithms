@@ -31,14 +31,14 @@ root.right = new Node(3);
 root.left.left = new Node(4);
 root.left.right = new Node(5);
 
-console.log("In-order traversal:");
-inOrder(root);
+// console.log("In-order traversal:");
+// inOrder(root);
 
-console.log("Pre-order traversal:");
-preOrder(root);
+// console.log("Pre-order traversal:");
+// preOrder(root);
 
-console.log("Post-order traversal:");
-postOrder(root);
+// console.log("Post-order traversal:");
+// postOrder(root);
 
 console.log("BFS traversal:");
 bfs(root);
