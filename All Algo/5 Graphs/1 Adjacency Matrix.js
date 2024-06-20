@@ -41,7 +41,7 @@ class Graph {
         }
     }
 
-    removeVertex(vertex) { // I Have to do RND on this as well
+    removeVertex(vertex) { // I Have to do R&D on this as well
         let index = this.vertices.indexOf(vertex);
 
         if (index !== -1) {
