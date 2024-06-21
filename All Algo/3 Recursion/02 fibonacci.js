@@ -9,3 +9,5 @@ function fibonacci(n) {
 
 // Example usage:
 console.log(fibonacci(6)); // Output: 8
+
+// 1,1,2,3,5,8,13,21

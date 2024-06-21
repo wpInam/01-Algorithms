@@ -45,9 +45,9 @@ class Graph {
         let index = this.vertices.indexOf(vertex);
 
         if (index !== -1) {
-            this.vertices.splice(index, 1);
-            this.adjacencyMatrix.splice(index, 1);
-            this.adjacencyMatrix.forEach(row => row.splice(index, 1));
+            this.vertices.splice(index, 1);// Delete
+            this.adjacencyMatrix.splice(index, 1); // Removing that Row 
+            this.adjacencyMatrix.forEach(row => row.splice(index, 1)); // Removing that Column
         }
     }
 

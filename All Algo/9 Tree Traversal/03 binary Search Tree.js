@@ -19,7 +19,7 @@ class Node {
       }
       let current = this.root
       while (current) {
-        if (value === current.value) return undefined // Base Case
+        if (value === current.value) return undefined // Case where value Already Added
         if (value < current.value) {
           if (current.left === null) {
             current.left = newNode

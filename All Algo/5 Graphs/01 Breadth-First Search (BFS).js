@@ -50,6 +50,7 @@ class Graph {
     }
 
     bfs(startingVertex) { // --- Main Is This
+        // --- Its is Giving us "Vertex" and
         debugger;
         const visited = new Set();
         const queue = [startingVertex];

@@ -14,11 +14,11 @@ class Queue {
 
     // Add an element to the end of the queue
     enqueue(value) {
-        const newNode = new Node(value);
+        const newNode = new Node(value); // Step:1
         if (this.back) {
             this.back.next = newNode;
         }
-        this.back = newNode;
+        this.back = newNode; // Step:2
         if (!this.front) { // Check if it is null
             this.front = this.back; 
             // First time we assign the new Node() to this.front
