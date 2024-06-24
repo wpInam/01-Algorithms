@@ -10,6 +10,7 @@ class Node {
 // Breadth-First Search (BFS) traversal
 
 function bfs(root) {
+  debugger
   if (!root) return; // if it null | undefined ... 
 
   const queue = [];
